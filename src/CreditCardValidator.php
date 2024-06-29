@@ -55,7 +55,8 @@ class CreditCardValidator
         $normalizedCardNumber = $this->normalizeCardNumber();
 
         if (! $this->containsOnlyDigits($normalizedCardNumber)) {
-            throw new \InvalidArgumentException('Card number must contain only digits');
+            //            throw new \InvalidArgumentException('Card number must contain only digits');
+            return false;
         }
 
         $cardType = $this->getCardType();
