@@ -54,18 +54,18 @@ class CreditCardValidator
     {
         $normalizedCardNumber = $this->normalizeCardNumber();
 
-        if (!$this->containsOnlyDigits($normalizedCardNumber)) {
+        if (! $this->containsOnlyDigits($normalizedCardNumber)) {
             throw new \InvalidArgumentException('Card number must contain only digits');
         }
 
         $cardType = $this->getCardType();
         $cardLength = strlen($normalizedCardNumber);
 
-        if ($cardType === CardEnum::AMERICAN_EXPRESS && $cardLength!== 15) {
+        if ($cardType === CardEnum::AMERICAN_EXPRESS && $cardLength !== 15) {
             throw new \InvalidArgumentException('American Express card numbers must be 15 digits long');
-        } elseif ($cardType === CardEnum::DINERS_CLUB && $cardLength!== 14) {
+        } elseif ($cardType === CardEnum::DINERS_CLUB && $cardLength !== 14) {
             throw new \InvalidArgumentException('Diners Club card numbers must be 14 digits long');
-        } elseif ($cardType!== CardEnum::AMERICAN_EXPRESS && $cardType!== CardEnum::DINERS_CLUB && ($cardLength < self::MIN_CARD_LENGTH || $cardLength > self::MAX_CARD_LENGTH)) {
+        } elseif ($cardType !== CardEnum::AMERICAN_EXPRESS && $cardType !== CardEnum::DINERS_CLUB && ($cardLength < self::MIN_CARD_LENGTH || $cardLength > self::MAX_CARD_LENGTH)) {
             throw new \InvalidArgumentException('Card number length is invalid');
         }
 
