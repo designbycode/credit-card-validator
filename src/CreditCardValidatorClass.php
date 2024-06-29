@@ -2,6 +2,4 @@
 
 namespace Designbycode\CreditCardValidator;
 
-class CreditCardValidatorClass
-{
-}
+class CreditCardValidatorClass {}
