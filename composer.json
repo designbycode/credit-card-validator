@@ -1,0 +1,49 @@
+{
+    "name": "designbycode/credit-card-validator",
+    "description": "This is my package credit-card-validator",
+    "keywords": [
+        "designbycode",
+        "credit-card-validator"
+    ],
+    "homepage": "https://github.com/designbycode/credit-card-validator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claude Myburgh",
+            "email": "claude@designbycode.co.za",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.20",
+        "laravel/pint": "^1.0",
+        "spatie/ray": "^1.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "Designbycode\\CreditCardValidator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Designbycode\\CreditCardValidator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+            "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
