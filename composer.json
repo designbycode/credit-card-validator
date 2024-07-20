@@ -1,9 +1,11 @@
 {
     "name": "designbycode/credit-card-validator",
-    "description": "This is my package credit-card-validator",
+    "description": "The Credit Card Validator package provides a set of classes to validate credit card numbers, expiry dates, and CVV codes. This package is designed to help you ensure that the credit card information provided by users is valid and accurate.",
     "keywords": [
         "designbycode",
-        "credit-card-validator"
+        "credit-card-validator",
+        "credit card validator",
+        "credit card"
     ],
     "homepage": "https://github.com/designbycode/credit-card-validator",
     "license": "MIT",
